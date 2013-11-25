@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Venue:
+  = @bout.venue_id
+%p
+  %b Home team:
+  = @bout.home_team_id
+%p
+  %b Away team:
+  = @bout.away_team_id
+%p
+  %b Start:
+  = @bout.start
+
+= link_to 'Edit', edit_bout_path(@bout)
+\|
+= link_to 'Back', bouts_path

@@ -1,0 +1,25 @@
+%h1 Listing bouts
+
+%table
+  %tr
+    %th Venue
+    %th Home team
+    %th Away team
+    %th Start
+    %th
+    %th
+    %th
+
+  - @bouts.each do |bout|
+    %tr
+      %td= bout.venue_id
+      %td= bout.home_team_id
+      %td= bout.away_team_id
+      %td= bout.start
+      %td= link_to 'Show', bout
+      %td= link_to 'Edit', edit_bout_path(bout)
+      %td= link_to 'Destroy', bout, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Bout', new_bout_path

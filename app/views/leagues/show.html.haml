@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%h1= @league.name
+-@teams = @league.teams
+= render "teams/list"
+
+= link_to 'Edit', edit_league_path(@league)
+\|
+= link_to 'Back', leagues_path
